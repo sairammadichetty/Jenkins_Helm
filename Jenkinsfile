@@ -68,7 +68,7 @@ pipeline {
 				sh "sudo apt-get install helm"
 				sh "kn="demo""
 				sh "export namespace=$kn"
-				sh "kubectl config set-context $(kubectl config current-context) --namespace=$kn --set namespace=$kn"
+				sh "kubectl config set-context $(kubectl config current-context) --set namespace=$kn"
 			    sh "helm upgrade --install helm-app demochart --wait"
 			    echo "Deployment Finished . .."
 		    }
