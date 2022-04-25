@@ -62,7 +62,7 @@ pipeline {
 				sh "sed -i 's/tagversion/${env.BUILD_ID}/g' demochart/templates/deployment.yaml"
 			    echo "Start deployment of serviceLB.yaml"
 			    sh "helm upgrade --install helm-app demochart --wait"
-			    echo "Deployment Finished ..."
+			    echo "Deployment Finished . .."
 		    }
 	    }
     }
