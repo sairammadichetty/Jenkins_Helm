@@ -66,7 +66,7 @@ pipeline {
 				sh "echo deb https://baltocdn.com/helm/stable/debian/ all main | sudo tee /etc/apt/sources.list.d/helm-stable-debian.list"
 				sh "sudo apt-get update"
 				sh "sudo apt-get install helm"
-				sh "kubectl get pods"
+				sh "sudo kubectl get pods"
 				sh "kubectl config current-context"
 				sh "kubectl config set-context \$(kubectl config current-context) --namespace=demo"
 			    sh "helm upgrade --install helm-app demochart --set namespace=demo"
